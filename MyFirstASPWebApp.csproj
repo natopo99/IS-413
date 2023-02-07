@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <Compile Remove="wwwroot\jQuery\**" />
+    <Content Remove="NewFolder\**" />
+    <Content Remove="wwwroot\jQuery\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <EmbeddedResource Remove="wwwroot\jQuery\**" />
+    <None Remove="NewFolder\**" />
+    <None Remove="wwwroot\jQuery\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\index.html" />
+    <Content Remove="wwwroot\js\grade_calc.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Models\lib\jQuery\jquery-3.6.3.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Models\lib\jQuery\jquery-3.6.3.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\grade_calc.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\NewFolder\" />
+  </ItemGroup>
+
+</Project>
